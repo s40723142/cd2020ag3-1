@@ -482,7 +482,106 @@ print(mlist)
 <p>Webots在機器人技術上有一定程度的依靠，例如:移動機器人原型製作、多主體研究、教授機器人技術、機器人競賽等等涉略範圍。</p>
 <p>即使不知道python、c++、java等程式編碼的知識，依然可以使用BotStudio程式編碼器對機器人編輯。<br/>如果不喜歡模組中原有的機器人範例包，也可另外使用3D、VRML97描述語言的程式來創建模型並導入。<br/> <br/><span style="color: #ff0000;">Webots模擬組成條件:</span><br/> <span style="color: #ff6600;">1</span>-.wbt副檔名，定義多個既器人與環境，取決於外部(proto)，檔案儲存在每個Webots項目裡worlds子目錄中。<br/> <span style="color: #ff6600;">2</span>-在c++可進行修改可選之物理插件。<br/> <span style="color: #ff6600;">3</span>-機器人都由程式控制程序組成(python、c++、java)。<br/> <span style="color: #ff6600;">4</span>-對於環境中物件之方向、位置、形狀、顏色、亮度會仔細編輯。<br/> <span style="color: #ff6600;">5</span>-關節本身包含一個攝像頭，但World文件不包含機器人控制器代碼，只有指定每個機器人所需控制器名稱。</p>
 <p><br/>管理者可執行是因為操作者正在執行的關係，並不是由機器人執行操作，適合任何編碼語言，但與常規控制器來說管理者將有權使用特權操作(包含模擬控制)。</p>
-<p>開始Webots之操作<br/> <br/>使用者介面</p>
+<p><span style="color: #ff0000;">開始Webots之操作</span></p>
+<p><span>主軸:主要為解說命令式與操作系統步驟</span></p>
+<p><span>中文解說:</span></p>
+<p><span style="color: #ff0000;">1</span>-<span style="color: #800080;">Linux</span>=執行Webots需輸入Webots指令</p>
+<p><span style="color: #ff0000;">2</span>-<span style="color: #800080;">macOS</span>=打開軟件包的目錄，點開Webots圖標</p>
+<p><span style="color: #ff0000;">3</span>-<span style="color: #800080;">Windows</span>=點選開始-&gt;程序文件/ Cyberbotics，並點擊Webots R2020a版本2之]圖標。</p>
+<p>也可以通過鍵入webots.bat從DOS控制台（cmd.exe）啟動Webots。</p>
+<p>僅從C：\ Program Files \ Webots \ msys64 \ mingw64 \ bin目錄執行（假設Webots已安裝在C：\ Program Files中），此命令才有效。</p>
+<p>如果將上述目錄添加到Path環境變量中，也可以從任何目錄工作。</p>
+<p>補充：直接從DOS控制台調用webots.exe可能無法工作，因為某些設置可能會丟失(請參閱webots.bat的內容)。</p>
+<p></p>
+<p><span style="color: #ff0000;">4</span>-<span style="color: #800080;">Command Line Arguments(命令行參數)</span>=從Linux 或 Mac或命令提示符（Windows）啟動Webots時，可以使用以下命令行選項：</p>
+<pre class="brush:plain;auto-links:false;toolbar:false" contenteditable="false">Usage: webots [options] [worldfile]
+
+Options:
+
+  --help
+    Display this help message and exit.
+
+  --version
+    Display version information and exit.
+
+  --sysinfo
+    Display information about the system and exit.
+
+  --mode=&lt;mode&gt;
+    Choose the startup mode, overriding application preferences. The &lt;mode&gt;
+    argument must be either pause, realtime, run or fast.
+
+  --fullscreen
+    Start Webots in fullscreen.
+
+  --minimize
+    Minimize the Webots window on startup.
+
+  --batch
+    Prevent Webots from creating blocking pop-up windows.
+
+  --stdout
+    Redirect the stdout of the controllers to the terminal.
+
+  --stderr
+    Redirect the stderr of the controllers to the terminal.
+
+  --stream[="key[=value];..."]
+    Start the Webots streaming server. Parameters may be
+    given as an option:
+      port=1234          - Start the streaming server on port 1234.
+      monitorActivity    - Print a dot '.' on stdout every 5 seconds.
+      disableTextStreams - Disable the streaming of stdout and stderr.
+
+  --log-performance=&lt;file&gt;[,&lt;steps&gt;]
+    Measure the performance of Webots and log it in the file specified in the
+    &lt;file&gt; argument. The optional &lt;steps&gt; argument is an integer value that
+    specifies how many steps are logged. If the --sysinfo option is used, the
+    system information is prepended into the log file.
+
+Please report any bug to http://www.cyberbotics.com/bug</pre>
+<p>選擇worldfile參數指定要打開的.wbt文件的名稱。</p>
+<p>如果未指定，則Webots嘗試打開最近打開的文件。</p>
+<p></p>
+<p><span style="color: #ff6600;">--minimize</span>選項用於在啟動時最小化（圖標化）Webots窗口。</p>
+<p>將跳過啟動屏幕和最終的“歡迎對話框”。</p>
+<p>從選項中自動啟動Webot時，可以使用此選項來避免窗口混亂。</p>
+<p><span>補充</span>:當指定--minimize時，Webots自動使用快速模式。</p>
+<p></p>
+<p><br/><span style="color: #ff6600;">--mode = &lt;mode&gt;</span>選項可用於以指定的模擬模式啟動Webot。</p>
+<p><span style="color: #ff0000;">四種可能的模擬模式是：暫停，實時，運行和快速。</span></p>
+<p>對應於Webots圖形用戶界面的模擬控制按鈕。將覆蓋但不修改Webots首選項中保存的啟動模式。</p>
+<p>例如:鍵入webots --mode = pause filename.wbt以暫停模式啟動Webots。</p>
+<p></p>
+<p><br/><span style="color: #ff6600;">--sysinfo</span>選項會顯示有關當前系統的雜項信息，並退出Webots。</p>
+<p></p>
+<p><span><span style="color: #ff6600;">--stdout</span>和<span style="color: #ff6600;">--stderr</span>選項</span>具有將Webots控制台輸出重定向到調用終端或進程的作用。</p>
+<p>例如:1-這可用於將控制器輸出重定向到文件或將其通過管道傳遞給Shell命令。</p>
+<p><br/>        2---stdout重定向控制器的stdout流，而--stderr重定向stderr流。</p>
+<p><br/><span>補充</span>:stderr流還可能包含Webots錯誤或警告消息。</p>
+<p></p>
+<p><span><span style="color: #ff6600;">--stream</span>選項</span>啟動Webots流服務器。</p>
+<p>可以選擇更改流服務器的默認參數。</p>
+<p>此選項是一個字符串，其中包含參數鍵及其值的列表，並用分號分隔。</p>
+<p><img alt="" height="235" src="/images/webots圖例表格.png" width="900"/></p>
+<p><br/>(上圖表描述受支持的選項。)</p>
+<p><span style="color: #ff0000;">5</span>-<span><span style="color: #800080;">Safe Mode(安全模式)</span>=</span>Webots可能無法啟動，因為阻止導致Webots或OpenGL崩潰的世界上。<br/>在這種情況下，可以在安全模式下啟動Webots。</p>
+<p>安全模式迫使Webots從一個空白的世界開始，減少所有OpenGL選項並存儲這些首選項。</p>
+<p>因此只需在運行Webots的環境中設置環境變量WEBOTS_SAFE_MODE。</p>
+<p>以這種方式成功啟動後，必須取消設置此環境變量，再次打開世界並增加OpenGL首選項。</p>
+<p><span>補充</span>:此操作可能會導致新的崩潰。</p>
+<p><span><span style="color: #ff6600;">on Windows(Windows操作)</span>:</span>打開環境變量系統對話框。</p>
+<p>在Windows開始菜單的搜索欄中查找“環境變量”，點擊“編輯系統環境變量”，開啟“系統屬性”對話框，進入“高級”選項卡。</p>
+<p>點擊底部的環境變量按鈕。</p>
+<p>添加新的WEBOTS_SAFE_MODE用戶環境變量。</p>
+<p>用戶變量面板中，點擊“新建”按鈕，添加名為WEBOTS_SAFE_MODE的新用戶變量，其值為true。</p>
+<p>之後照常啟動Webots。</p>
+<p><br/><span style="color: #ff6600;">On Linux and macOS:</span>輸入以下兩行指令碼</p>
+<pre class="brush:plain;auto-links:false;toolbar:false" contenteditable="false">export WEBOTS_SAFE_MODE=true
+webots</pre>
+<p>即可開啟Webots。</p>
+<p></p>
+<p>使用者介面</p>
 <p>3D視窗</p>
 <p>情景樹</p>
 <p>優先選項</p>
