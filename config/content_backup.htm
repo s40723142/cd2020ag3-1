@@ -90,7 +90,7 @@
 <p>        電子產品由外部和內部結構元件組成的產品，它包含任何用於使用者接頭的硬體，用於任何連接線的連接器和任何使用者會實質感受到和看到的元件，許多電子外殼包含一個或多個PCBA，而且這些必須在一般使用下被嚴格保護。</p>
 <p>        一個外殼可以非常簡單或是極度複雜能由數千個零件組成，設計者的首要任務是定義他們正在設計的"系統"，這被包含在後續的章節，"外殼"此詞將會被以較不複雜的結束在此範圍，而解釋方法可以被延伸到更複雜的設計情況。</p>
 <p><span style="text-decoration: underline;"><strong>EPE設計者</strong></span></p>
-<p>        這是負責設計電子產品外殼的人，在很多情況下，這是為機械工程師，但它可以是有機械工程背景或相關專業經驗的人，一位好的EPE設計者有以下特性:</p>
+<p>        這是負責設計電子產品外殼的人，在很多情況下，這是位機械工程師，但它可以是有機械工程背景或相關專業經驗的人，一位好的EPE設計者有以下特性:</p>
 <ul>
 <li>理解和確認產品規格的能力</li>
 <li>能夠增加或幫忙建立產品規格</li>
@@ -514,7 +514,36 @@ print(mlist)
 <p></p>
 <p>===================</p>
 <h1>Assignment 2</h1>
-<p></p><h1>Webots User Guide</h1>
+<p><a href="https://github.com/s40723110/cd2020ag3/tree/master/PDF">https://github.com/s40723110/cd2020ag3/tree/master/PDF</a></p>
+<p></p>
+<p>國立虎尾科技大學 – 四設二甲 – 協同產品設計實習 – cd2020ag3 Assignment 2:</p>
+<p><br/> <br/>Due April 22, 2020 for class 2a and April 23, 2020 for class 2b.</p>
+<p><br/> <br/>1 . According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's four wheeled robot.</p>
+<p><br/> 在設計車子時，首先我們要先有正確的思維方式，了解甚麼是協同合作、 協同合作的重要性、以及彼此在協同合作時的心態。再來我們會需要一些好的 工具去協同設計四輪車(ex: FIGMA,MARVEL, etc)。在設計前了解我們要做甚麼樣 的車子、車子的材料考量以及車子的用途也很重要。除此之外，我們還需要思 考如何讓整個流程最佳化，除了使用對的工具外，對於設計過程中產生的變數 進行實驗的順序也影響整個流程的流暢度。 <br/> <br/>2 . What do you need to know from https://cyberbotics.com/doc/guide/index to implement a four-wheeled robot? </p>
+<p>Webots使用重點:</p>
+<p><span style="color: #ff6600;">1</span>-模型</p>
+<p><span style="color: #ff6600;">2</span>-程式:使用python當作主要撰寫程式</p>
+<p>Command Line Arguments(命令行參數)=從Linux 或 Mac或命令提示符（Windows）啟動Webots時，可以使用以下命令行選項：<br/>Usage: webots [options] [worldfile]</p>
+<p>Options:</p>
+<p>--help<br/> Display this help message and exit.</p>
+<p>--version<br/> Display version information and exit.</p>
+<p>--sysinfo<br/> Display information about the system and exit.</p>
+<p>--mode=&lt;mode&gt;<br/> Choose the startup mode, overriding application preferences. The &lt;mode&gt;<br/> argument must be either pause, realtime, run or fast.</p>
+<p>--fullscreen<br/> Start Webots in fullscreen.</p>
+<p>--minimize<br/> Minimize the Webots window on startup.</p>
+<p>--batch<br/> Prevent Webots from creating blocking pop-up windows.</p>
+<p>--stdout<br/> Redirect the stdout of the controllers to the terminal.</p>
+<p>--stderr<br/> Redirect the stderr of the controllers to the terminal.</p>
+<p>--stream[="key[=value];..."]<br/> Start the Webots streaming server. Parameters may be<br/> given as an option:<br/> port=1234 - Start the streaming server on port 1234.<br/> monitorActivity - Print a dot '.' on stdout every 5 seconds.<br/> disableTextStreams - Disable the streaming of stdout and stderr.</p>
+<p>--log-performance=&lt;file&gt;[,&lt;steps&gt;]<br/> Measure the performance of Webots and log it in the file specified in the<br/> &lt;file&gt; argument. The optional &lt;steps&gt; argument is an integer value that<br/> specifies how many steps are logged. If the --sysinfo option is used, the<br/> system information is prepended into the log file.</p>
+<p>Please report any bug to http://www.cyberbotics.com/bug</p>
+<p><span style="color: #ff6600;">3<span style="color: #000000;">-</span></span>環境: </p>
+<p>提供模擬環境，使用戶可創建物理特性(質量、摩擦係數等等)的3D虛擬世界，可添加各種不同輪型、飛行等機器人在景象中，且配備感測器、執行設備等(攝像機、馬達、接收器等)，也可對機器人做單獨編程。</p>
+<p>Webots對像是模塊化且可參數化的，因此可以從這些示例開始輕鬆創建其他環境。這些示例的世界文件位於“ WEBOTS_HOME / projects / sample / environments /”目錄中。<br/>位於“ WEBOTS_HOME /項目/車輛/世界”中的室外和城市環境，此處未顯示。</p>
+<p>使用以下感測器<br/> 1-顯示激光雷達路徑:青色線框顯示或隱藏場景中每個激光雷達的圖層（激光射線路徑）<br/> 2-顯示攝像機視錐:使用洋紅色線框顯示或隱藏場景中每個攝像機的OpenGL消隱視錐和記錄的圖像。<br/> 3-顯示距離傳感器:可以顯示或隱藏距離傳感器設備投射的射線。<br/> 4-顯示光位置:顯示或隱藏PointLight和SpotLight燈的位置。<br/> 5-顯示筆繪畫射線:可以顯示或隱藏筆設備繪畫的射線。<br/> 6-顯示雷達視錐:顯示或隱藏雷達視錐。</p>
+<p><br/><span style="color: #ff6600;">4</span>-轉換(控制器、機器人):<br/>遠程啟動Webots（ssh）:可以使用ssh（或類似命令）在遠程計算機上啟動Webot。但是，Webots僅能獲得與本地（在同一台計算機上）運行的X服務器的X11連接才能工作。當前無法將Webots圖形輸出重定向到另一台計算機。</p>
+<p><span style="color: #ff6600;">感想:</span></p>
+<p>關於webots將模組套入環境中並撰寫程式或是使用控制器操作機器人或四輪驅動車都需要對使用者手冊有一定程度上的了解才能真正運用，但目前要說到特別熟悉卻不是如此，目前只能簡單操作將模組套入的部分，並依序設定部分操作控制鍵，未來將會在使用操作下更深入了解webots的各個條件設定。</p><h1>Webots User Guide</h1>
 <p>先安裝webot 可攜版本 <a href="https://drive.google.com/a/gm.nfu.edu.tw/uc?id=1MolDH7kKJt_IIBTrKalsMfNWMrqqTWdt&amp;export=download">載點位置</a></p>
 <p>官網window <span>電腦安裝版</span> <a href="https://cyberbotics.com/#download" title="R2020a-rev1"> <span>R2020a-rev1</span></a></p>
 <p><span>可能會出現的問題</span></p>
