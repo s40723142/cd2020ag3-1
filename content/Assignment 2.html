@@ -56,16 +56,18 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 
-<!-- for LaTeX equations 暫時不用
+<!-- 啟用 LaTeX equations 編輯 -->
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
 init_mathjax = function() {
@@ -86,7 +88,7 @@ init_mathjax = function() {
 }
 init_mathjax();
 </script>
--->
+
 <!-- 暫時不用
 <script src="./../cmsimde/static/fengari-web.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
@@ -97,6 +99,11 @@ init_mathjax();
 <script src="https://scrum-3.github.io/web/brython/brython.js"></script>
 <script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
 -->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
 
 </head>
 <body>
@@ -136,7 +143,7 @@ init_mathjax();
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a><li><a href='week 4.html'>week 4</a><li><a href='week 5.html'>week 5</a><li><a href='week6.html'>week6</a><li><a href='week7.html'>week7</a><li><a href='week11.html'>week11</a><li><a href='week12.html'>week12</a><li><a href='week13.html'>week13</a><li><a href='week14.html'>week14</a></li></ul><li class='has-children'><a href='Topic.html'>Topic</a><ul class='dropdown'><li class='has-children'><a href='Topic 0.html'>Topic 0</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a></li></ul><li><a href='Topic 1.html'>Topic 1</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Assignment -1 report.html'>Assignment -1 report</a><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='coppeliaSim心得.html'>coppeliaSim心得</a><li><a href='User interface.html'>User interface</a><li><a href='Scenes and models.html'>Scenes and models</a><li><a href='Environment.html'>Environment</a><li><a href='環境.html'>環境</a><li><a href='Entities.html'>Entities</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Writing code.html'>Writing code</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li></ul><li><a href='Assignment 2.html'>Assignment 2</a><li class='has-children'><a href='Webots User Guide.html'>Webots User Guide</a><ul class='dropdown'><li><a href='Getting Started with Webots.html'>Getting Started with Webots</a></li></ul><li><a href='onshape.html'>onshape</a></li>
+                     <li><a href='About.html'>About</a><li><a href='Develop.html'>Develop</a><li><a href='Group.html'>Group</a><li class='has-children'><a href='WEEK.html'>WEEK</a><ul class='dropdown'><li><a href='week 3.html'>week 3</a><li><a href='week 4.html'>week 4</a><li><a href='week 5.html'>week 5</a><li><a href='week6.html'>week6</a><li><a href='week7.html'>week7</a><li><a href='week11.html'>week11</a><li><a href='week12.html'>week12</a><li><a href='week13.html'>week13</a><li><a href='week14.html'>week14</a></li></ul><li class='has-children'><a href='Topic.html'>Topic</a><ul class='dropdown'><li class='has-children'><a href='Topic 0.html'>Topic 0</a><ul class='dropdown'><li><a href='DigitalProductCollaboration.html'>DigitalProductCollaboration</a></li></ul><li><a href='Topic 1.html'>Topic 1</a></li></ul><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='Assignment -1 report.html'>Assignment -1 report</a><li><a href='Python3.8.2.html'>Python3.8.2</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li><a href='coppeliaSim心得.html'>coppeliaSim心得</a><li><a href='User interface.html'>User interface</a><li><a href='Scenes and models.html'>Scenes and models</a><li><a href='Environment.html'>Environment</a><li><a href='環境.html'>環境</a><li><a href='Entities.html'>Entities</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='Writing code.html'>Writing code</a><li><a href='Simulation.html'>Simulation</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Random grouping.html'>Random grouping</a></li></ul><li><a href='Assignment 2.html'>Assignment 2</a><li class='has-children'><a href='Webots User Guide.html'>Webots User Guide</a><ul class='dropdown'><li><a href='Getting Started with Webots.html'>Getting Started with Webots</a></li></ul><li><a href='onshape.html'>onshape</a><li class='has-children'><a href='VirtualBox.html'>VirtualBox</a><ul class='dropdown'><li><a href='IPv4.html'>IPv4</a><li><a href='IPv6.html'>IPv6</a></li>
                       </ul>
                 </nav>
               </div>
@@ -153,7 +160,7 @@ init_mathjax();
 <p>國立虎尾科技大學 – 四設二甲 – 協同產品設計實習 – cd2020ag3 Assignment 2:</p>
 <p><br/> <br/>Due April 22, 2020 for class 2a and April 23, 2020 for class 2b.</p>
 <p><br/> <br/>1 . According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's four wheeled robot.</p>
-<p><br/> 在設計車子時，首先我們要先有正確的思維方式，了解甚麼是協同合作、 協同合作的重要性、以及彼此在協同合作時的心態。再來我們會需要一些好的 工具去協同設計四輪車(ex: FIGMA,MARVEL, etc)。在設計前了解我們要做甚麼樣 的車子、車子的材料考量以及車子的用途也很重要。除此之外，我們還需要思 考如何讓整個流程最佳化，除了使用對的工具外，對於設計過程中產生的變數 進行實驗的順序也影響整個流程的流暢度。 <br/> <br/>2 . What do you need to know from https://cyberbotics.com/doc/guide/index to implement a four-wheeled robot? </p>
+<p><br/> 在設計車子時，首先我們要先有正確的思維方式，了解甚麼是協同合作、 協同合作的重要性、以及彼此在協同合作時的心態。再來我們會需要一些好的 工具去協同設計四輪車(ex: FIGMA,MARVEL, etc)。在設計前了解我們要做甚麼樣 的車子、車子的材料考量以及車子的用途也很重要。除此之外，我們還需要思 考如何讓整個流程最佳化，除了使用對的工具外，對於設計過程中產生的變數 進行實驗的順序也影響整個流程的流暢度。 <br/> <br/>2 . What do you need to know from https://cyberbotics.com/doc/guide/index to implement a four-wheeled robot?</p>
 <p>Webots使用重點:</p>
 <p><span style="color: #ff6600;">1</span>-模型</p>
 <p><span style="color: #ff6600;">2</span>-程式:使用python當作主要撰寫程式</p>
@@ -177,7 +184,8 @@ init_mathjax();
 <p>使用以下感測器<br/> 1-顯示激光雷達路徑:青色線框顯示或隱藏場景中每個激光雷達的圖層（激光射線路徑）<br/> 2-顯示攝像機視錐:使用洋紅色線框顯示或隱藏場景中每個攝像機的OpenGL消隱視錐和記錄的圖像。<br/> 3-顯示距離傳感器:可以顯示或隱藏距離傳感器設備投射的射線。<br/> 4-顯示光位置:顯示或隱藏PointLight和SpotLight燈的位置。<br/> 5-顯示筆繪畫射線:可以顯示或隱藏筆設備繪畫的射線。<br/> 6-顯示雷達視錐:顯示或隱藏雷達視錐。</p>
 <p><br/><span style="color: #ff6600;">4</span>-轉換(控制器、機器人):<br/>遠程啟動Webots（ssh）:可以使用ssh（或類似命令）在遠程計算機上啟動Webot。但是，Webots僅能獲得與本地（在同一台計算機上）運行的X服務器的X11連接才能工作。當前無法將Webots圖形輸出重定向到另一台計算機。</p>
 <p><span style="color: #ff6600;">感想:</span></p>
-<p>關於webots將模組套入環境中並撰寫程式或是使用控制器操作機器人或四輪驅動車都需要對使用者手冊有一定程度上的了解才能真正運用，但目前要說到特別熟悉卻不是如此，目前只能簡單操作將模組套入的部分，並依序設定部分操作控制鍵，未來將會在使用操作下更深入了解webots的各個條件設定。</p><br />Random grouping << <a href='Random grouping.html'>Previous</a> <a href='Webots User Guide.html'>Next</a> >> Webots User Guide</div>
+<p>關於webots將模組套入環境中並撰寫程式或是使用控制器操作機器人或四輪驅動車都需要對使用者手冊有一定程度上的了解才能真正運用，但目前要說到特別熟悉卻不是如此，目前只能簡單操作將模組套入的部分，並依序設定部分操作控制鍵，未來將會在使用操作下更深入了解webots的各個條件設定。</p>
+<br />Random grouping << <a href='Random grouping.html'>Previous</a> <a href='Webots User Guide.html'>Next</a> >> Webots User Guide</div>
         
     <!-- footer -->
       <div class="container">
