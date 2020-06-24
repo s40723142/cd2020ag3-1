@@ -154,18 +154,22 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">Environment << <a href='Environment.html'>Previous</a> <a href='Entities.html'>Next</a> >> Entities<br /><h1>環境</h1>
+<p>scenes</p>
+<p></p>
+<p>場景和模型是CoppeliaSim的主要模擬元素。 模型是場景的子元素，明確標記為模型。</p>
+<p>models</p>
+<p></p>
+<p>模型是場景的子元素。 除了文件（“ * .ttm”-文件類型）外，模型本身不能存在，也不能通過自身進行模擬。 模型必須包含在場景中才能運行。</p>
+<p>通過在同一層次樹上構建的場景對象的選擇來定義模型，其中樹的基礎必須是標記為對像是模型基礎的對象。</p>
+<p></p>
+<p><span>environment</span></p>
+<p></p>
+<p><span>CoppeliaSim中的環境定義了屬於場景但不屬於場景對象的屬性和參數。 保存模型時不保存環境屬性和參數，而僅保存場景時不保存。</span></p>
+<p><span>entities</span></p>
+<p></p>
+<p><span>實體是指場景對像或集合的術語。 </span></p>
+<br />Environment << <a href='Environment.html'>Previous</a> <a href='Entities.html'>Next</a> >> Entities</div>
         
     <!-- footer -->
       <div class="container">
