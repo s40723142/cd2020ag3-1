@@ -18,20 +18,20 @@
 <v t="leo.20180902120523.6"><vh>body</vh>
 <v t="leo.20180902120523.7"><vh>reveal div</vh>
 <v t="leo.20180902120523.8"><vh>slides div</vh>
-<v t="leo.20180902120523.9"><vh>封面投影片</vh>
+<v t="leo.20180902120523.9"><vh>cd2020ag3</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20180902120523.11"><vh>快捷鍵</vh>
-<v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
-</v>
-<v t="leo.20200324220038.1"><vh>Assignment 1.</vh>
-<v t="leo.20200324220038.2"><vh>content</vh></v>
-</v>
-<v t="leo.20200324221803.1"><vh>Python3.8.2</vh>
+<v t="leo.20200324221803.1"><vh>portable programming</vh>
 <v t="leo.20200324221803.2"><vh>portable programming</vh></v>
 </v>
 <v t="leo.20200324230537.1"><vh>RandomGrouping</vh>
 <v t="leo.20200324230537.2"><vh>RandomGrouping</vh></v>
+</v>
+<v t="leo.20200628192243.1"><vh>Assignment 1.report</vh>
+<v t="leo.20200628192243.2"><vh>Assignment 1.report</vh></v>
+</v>
+<v t="leo.20200628194455.1"><vh>Assignment 2.report</vh>
+<v t="leo.20200628194455.2"><vh>Assignment 2.report</vh></v>
 </v>
 <v t="leo.20180902120523.13"><vh>各式內容引用範例</vh>
 <v t="leo.20180902120523.14"><vh>導入數學符號與方程式</vh>
@@ -62,25 +62,6 @@ Created by [KMOLab](http://lab.kmol.info/)
 &lt;/small&gt;
 [CD2020ag3 網誌😍](./../blog/index.html)
 
-
-</t>
-<t tx="leo.20180902120523.11">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20180902120523.12"># 投影片快捷鍵
-
-* 利用箭頭上下前後換頁
-* 按 f 鍵進入全螢幕模式 (full screen)
-* 按 s 鍵可以顯示投影片筆記 (show)
-* 按 o 鍵可以切換單張或全域檢視 (overview)
-* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
-* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
 
 </t>
 <t tx="leo.20180902120523.13">&lt;section&gt;
@@ -330,21 +311,6 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="leo.20180902120538.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
-<t tx="leo.20200324220038.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20200324220038.2"># Assignment 1
-* Describe how to do an efficient random grouping for this course or do the roll calling randomly?
-* Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain CMSiMDE website, Pelican blog and Reveal.js presentation on Github?
-* What do you need to know from http://www.coppeliarobotics.com/helpFiles/index.html to implement a four-wheeled robot?
-
-</t>
 <t tx="leo.20200324221803.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -415,6 +381,40 @@ for i in range(1,5):
         print("-"*20)
 print(mlist)
 ```
+
+</t>
+<t tx="leo.20200628192243.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200628192243.2">## Assignment 1.pdf
+
+&lt;iframe width="900" height="570" src="https://s40723110.github.io/cd2020ag3/content/Assignment%20-1%20report.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+
+
+
+</t>
+<t tx="leo.20200628194455.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200628194455.2">## Assignment 2.pdf
+
+&lt;iframe width="900" height="570" src="https://s40723110.github.io/cd2020ag3/content/Assignment%202.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+
+
 
 </t>
 </tnodes>
